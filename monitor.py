@@ -6,7 +6,6 @@ import subprocess
 from pathlib import Path
 from datetime import datetime
 
-# Project directories
 BASE_DIR = Path(__file__).resolve().parent.parent
 REPORT_DIR = BASE_DIR / "reports"
 REPORT_DIR.mkdir(exist_ok=True)
@@ -87,7 +86,6 @@ def generate_report():
     except (OSError, subprocess.SubprocessError, json.JSONDecodeError) as error:
         report.append(f"System information error: {error}")
 
-    # Disk monitoring
     report.append("\nDISK INFORMATION")
 
     disk = shutil.disk_usage("C:/")
@@ -107,13 +105,11 @@ def generate_report():
     else:
         report.append("Disk Status: NORMAL")
 
-    # Network monitoring
     report.append("\nNETWORK INFORMATION")
 
     report.append(f"DNS Status: {check_dns()}")
     report.append(f"HTTPS Status: {check_https()}")
 
-    # Generate text report
     report_file = REPORT_DIR / "python_health_report.txt"
 
     report_file.write_text(
