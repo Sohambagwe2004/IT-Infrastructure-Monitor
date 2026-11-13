@@ -1,0 +1,23 @@
+IT INFRASTRUCTURE HEALTH REPORT
+=============================================
+Generated: 2026-11-13 19:52:47.206282
+
+SYSTEM INFORMATION
+Computer: SOHAMPC
+OS: Microsoft Windows 11 Pro
+Processor: 12th Gen Intel(R) Core(TM) i3-1215U
+CPU_Load: 26
+Total_RAM_GB: 7.68
+Used_RAM_GB: 6.92
+Free_RAM_GB: 0.76
+
+DISK INFORMATION
+Total Disk: 237.34 GB
+Used Disk: 206.29 GB
+Free Disk: 31.05 GB
+Disk Utilization: 86.92%
+Disk Status: HIGH UTILIZATION
+
+NETWORK INFORMATION
+DNS Status: SUCCESS - Resolved IP: 192.178.211.101
+HTTPS Status: SUCCESS - HTTPS port 443 reachable
