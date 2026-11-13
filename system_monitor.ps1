@@ -1,25 +1,18 @@
-
-# IT Infrastructure Monitoring Toolkit
-# Module 1: System Health Monitoring
-
 Write-Host "===================================="
 Write-Host " SYSTEM HEALTH MONITORING"
 Write-Host "===================================="
 
-# Get system information
 $Computer = Get-CimInstance Win32_ComputerSystem
 $OS = Get-CimInstance Win32_OperatingSystem
 $CPU = Get-CimInstance Win32_Processor
 
-# Calculate RAM usage
 $TotalRAM = [math]::Round($Computer.TotalPhysicalMemory / 1GB, 2)
 $FreeRAM = [math]::Round($OS.FreePhysicalMemory / 1MB, 2)
 $UsedRAM = [math]::Round($TotalRAM - $FreeRAM, 2)
 
-# Get disk information
+
 $Disks = Get-CimInstance Win32_LogicalDisk -Filter "DriveType=3"
 
-# Display system details
 Write-Host "`nCOMPUTER INFORMATION"
 Write-Host "Computer Name: $($Computer.Name)"
 Write-Host "Operating System: $($OS.Caption)"
